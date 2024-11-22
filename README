@@ -1,0 +1,8 @@
+The BOLA Detection Tool is a Go-based utility designed to analyze access log files and detect potential BOLA
+(Broken Object Level Authorization) attacks. It checks for unauthorized access patterns where a user tries to
+access another user's resources without proper authorization.
+
+The tool reads the provided access log file and scans the logs for any request where the user_id in the URL
+or request body does not match the authenticated user’s credentials.
+If a user tries to access another user's data, the tool flags it as a potential BOLA attack.
+For now, the tool only checks for BOLA attacks based on the user_id parameter in the logs.
